@@ -1,0 +1,73 @@
+---
+title: "Assignment 1"
+author: "Suraj"
+date: "2022-09-25"
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
+---
+
+##installed a ISLR Package
+##created a new R-notebook file
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+
+##calling the ISLR library 
+
+```{r}
+library(ISLR)
+Carseats<-Carseats
+```
+
+
+##print and summary of cardataseats
+```{r}
+summary(Carseats)
+print(Carseats)
+
+
+```
+
+##IQR of Price attribute
+
+```{r}
+
+IQR(Carseats$Price)
+
+```
+##scatter plot between sales and price
+```{r}
+plot(Carseats$Sales,Carseats$Price,main = "scatter plot between sales and price",xlab = "sales",ylab = "Price")
+
+```
+
+##barplot between sales and price
+```{r}
+barplot(Carseats$Sales,Carseats$Price)
+
+```
+
+
+## scatter plot between sales and prices by  using abline
+```{r}
+plot(Carseats$Sales, Carseats$Price, main = "Scatterplot between Price and Sales", xlab = "Sales", ylab = "Price",abline(Carseats$Sales,Carseats$Price))
+
+```
+
+##correlation between sales and price
+```{r}
+cor(Carseats$Sales,Carseats$Price)
+
+```
+
+##maximum value of advertising attribute
+```{r}
+max(Carseats$Advertising)
+
+```
+
